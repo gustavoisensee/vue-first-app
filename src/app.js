@@ -1,10 +1,17 @@
 import Vue from 'vue'
-import Counter from './components/counter.vue'
+import VueRouter from 'vue-router'
+import { sync } from 'vuex-router-sync'
+import Main from './modules/main/component.vue'
 import store from './store'
-import './style/main.css'
+import router from './router'
+
+Vue.use(VueRouter)
+
+sync(store, router)
 
 new Vue({
   el: '#app',
+  router,
   store,
-  render: h => h(Counter)
+  render: h => h(Main)
 })

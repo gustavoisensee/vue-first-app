@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="content">
     <div class="content-label">
       <span>
         Counter: {{ $store.state.count }}
@@ -17,6 +17,7 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
+  import './style.css'
 
   export default {
     computed: mapGetters([
